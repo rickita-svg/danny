@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="chart.js" href="script.js">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank Online | Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     bn <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <!-- Sidebar -->
+
+         <aside class="sidebar">
+             <div class="logo">
+                 <i class="fas fa-landmark"></i>
+                 <h1>SecureBank</h1>
+                </div>
+                
+        <ul class="menu">
+            <li class="menu-item active">
+                <a href="#" class="menu-link">
+                    <i class="fas fa-home"></i>
+                    <span class="menu-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span class="menu-text">Transfers</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <i class="fas fa-university"></i>
+                    <span class="menu-text">Loans</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <i class="fas fa-chart-pie"></i>
+                    <span class="menu-text">Analytics</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <i class="fas fa-user"></i>
+                    <span class="menu-text">Profile</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <i class="fas fa-cog"></i>
+                    <span class="menu-text">Settings</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="user-section">
+            <div class="user-avatar">JS</div>
+            <div class="user-info">
+                <div class="user-name">John Smith</div>
+                <div class="user-role">Premium Client</div>
+        
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="header">
+            <h2 class="page-title">Dashboard</h2>
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
+                <a href="#" class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="dashboard-grid">
+            <div class="card stat-card">
+                <div class="stat-card__icon bg-primary-light">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="stat-card__value">$24,820.50</div>
+                <div class="stat-card__label">Total Balance</div>
+            </div>
+            
+            <div class="card stat-card">
+                <div class="stat-card__icon bg-success-light">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="stat-card__value">$4,250.00</div>
+                <div class="stat-card__label">Income</div>
+            </div>
+            
+            <div class="card stat-card">
+                <div class="stat-card__icon bg-warning-light">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="stat-card__value">$2,150.75</div>
+                <div class="stat-card__label">Expenses</div>
+            </div>
+            
+            <div class="card stat-card">
+                <div class="stat-card__icon bg-danger-light">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="stat-card__value">$8,500.00</div>
+                <div class="stat-card__label">Monthly Spending</div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+            <div class="card">
+                <div class="chart-title">
+                    <span>Financial Overview</span>
+                    <div class="chart-actions">
+                        <button class="btn btn-outline btn-sm">Week</button>
+                        <button class="btn btn-outline btn-sm">Month</button>
+                        <button class="btn btn-primary btn-sm">Year</button>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="financialChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="chart-title">
+                    <span>Spending Distribution</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="spendingChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transactions Section -->
+        <div class="card transactions-section">
+            <div class="chart-title">
+                <span>Recent Transactions</span>
+                <button class="btn btn-outline btn-sm">View All</button>
+            </div>
+            <div class="table-responsive">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Grocery Store</td>
+                            <td>Aug 10, 2023</td>
+                            <td>-$86.40</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Salary Deposit</td>
+                            <td>Aug 05, 2023</td>
+                            <td>+$3,500.00</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Electric Bill</td>
+                            <td>Aug 03, 2023</td>
+                            <td>-$124.20</td>
+                            <td><span class="status status-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Online Shopping</td>
+                            <td>Aug 01, 2023</td>
+                            <td>-$59.99</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Restaurant Payment</td>
+                            <td>Jul 28, 2023</td>
+                            <td>-$75.30</td>
+                            <td><span class="status status-failed">Failed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="chart-title">
+            <span>Quick Actions</span>
+        </div>
+        <div class="quick-actions">
+            <div class="action-btn">
+                <div class="action-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="action-label">Transfer</div>
+            </div>
+            
+            <div class="action-btn">
+                <div class="action-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="action-label">Loans</div>
+            </div>
+            
+            <div class="action-btn">
+                <div class="action-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="action-label">Invest</div>
+            </div>
+            
+            <div class="action-btn">
+                <div class="action-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="action-label">Settings</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize charts when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Financial Chart
+            const financialCtx = document.getElementById('financialChart').getContext('2d');
+            const financialChart = new Chart(financialCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                    datasets: [
+                        {
+                            label: 'Income',
+                            data: [3200, 3500, 4000, 3800, 4200, 4500, 4300, 4600],
+                            borderColor: '#198754',
+                            backgroundColor: 'rgba(25, 135, 84, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Expenses',
+                            data: [2200, 2400, 2600, 2800, 3000, 3200, 3100, 3300],
+                            borderColor: '#dc3545',
+                            backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                            tension: 0.3,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                drawBorder: false
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Spending Chart
+            const spendingCtx = document.getElementById('spendingChart').getContext('2d');
+            const spendingChart = new Chart(spendingCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Housing', 'Food', 'Transport', 'Entertainment', 'Utilities'],
+                    datasets: [{
+                        data: [35, 20, 15, 10, 20],
+                        backgroundColor: [
+                            '#2d5bff',
+                            '#198754',
+                            '#ffc107',
+                            '#dc3545',
+                            '#6c757d'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+
+</html>
